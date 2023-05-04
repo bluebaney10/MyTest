@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 1em;
+            }
+            .title {
+                display: flex;
+                overflow: hidden;
+            }
+
+            .container h1 {
+                font-size: 2.2rem;
+            }
+
+            .content {
+                margin-bottom: 4em;
+            }
+
+            .content p {
+                display: inline;
+                background-repeat: no-repeat;
+                transition: all 500ms ease-in-out;
+            }
+
+            .v3 p {
+                color: transparent;
+                background-position: right;
+                background-size: 100% 100%;
+                background-image: linear-gradient(#a0aec0, #a0aec0);
+                /*  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); */
+            }
+
+            .v3 p:hover {
+                color: black;
+                background-size: 0% 100%;
+            }
+
+            /*  .title:hover h1 {
+                animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+            } */
+
+            .box-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .box-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                opacity: 0;
+                transition: all 500ms ease-in-out;
+            }
+
+            .box-image picture {
+                color: transparent;
+                background-position: right;
+                background-size: 100% 100%;
+                background-image: linear-gradient(#a0aec0, #a0aec0);
+                background-repeat: no-repeat;
+                transition: all 500ms ease-in-out;
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            /* .box-image:hover img {
+                opacity: 1;
+            } */
+
+            /*   .box-image:hover picture {
+                background-size: 0% 100%;
+            }
+ */
+            .v3:hover .box-image img {
+                opacity: 1;
+            }
+            .v3:hover .box-image picture {
+                background-size: 0% 100%;
+            }
+            .v3:hover .title h1 {
+                /*  animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s; */
+                animation: MoveUpEnd 0.2s forwards 0.2s;
+            }
+
+            @keyframes MoveUpInitial {
+                to {
+                    transform: translate3d(0, -105%, 0);
+                }
+            }
+
+            @keyframes MoveUpEnd {
+                from {
+                    transform: translate3d(0, 100%, 0);
+                }
+                to {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            /**/
+            div[class] {
+                color: #0000;
+                font-weight: bold;
+                display: inline-block;
+                font-size: 40px;
+                font-family: sans-serif;
+                margin: 25px;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+            .inverted-6 {
+                --_g1: conic-gradient(from 90deg at 50% 75%, #000 90deg, #fff 0) no-repeat;
+                --_g2: conic-gradient(from 90deg at 50% 75%, #0000 90deg, #000 0) no-repeat;
+                background: var(--_g1) 0 calc(134% - var(--_p, 0%)), var(--_g2) 0 calc(134% - var(--_p, 0%)),
+                    var(--_g1) 100% calc(200% - var(--_p, 0%)), var(--_g2) 100% calc(200% - var(--_p, 0%)), #000;
+                background-size: 50.2% 400%;
+                -webkit-background-clip: text, padding-box;
+                background-clip: text, padding-box;
+                transition: 0.8s;
+                font-size: 32px;
+            }
+            .inverted-6:hover {
+                --_p: 134%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>SPOILERS 💩</h1>
+            </div>
+
+            <div class="content v3">
+                <div class="box-image">
+                    <picture>
+                        <img src="img1.jpg" />
+                    </picture>
+                </div>
+
+                <p>
+                    Qui beatae autem et saepe earum et eligendi quia qui Quis saepe ea maiores omnis et ratione saepe.
+                    Quo commodi amet ea mollitia nisi est inventore nemo ut voluptate nostrum aut assumenda vero.
+                </p>
+            </div>
+
+            <div class="inverted-6">6. Hover me</div>
+        </div>
+    </body>
+</html>

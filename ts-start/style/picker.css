@@ -1,0 +1,29 @@
+.e-pk {
+    position: relative;
+}
+.e-pk label {
+    font-size: 14px;
+    margin: 8px 0;
+    display: block;
+}
+.e-pk .options {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+.e-pk .options .option {
+    border-radius: 4px;
+    width: 100%;
+    height: 84px;
+    border: 1px solid #ddd;
+    opacity: 0.5;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.e-pk .options .option.active {
+    opacity: 1;
+}

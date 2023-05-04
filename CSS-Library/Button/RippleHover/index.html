@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            [class^="hvr-"] {
+                margin: 0.4em;
+                padding: 1em;
+                cursor: pointer;
+                background: #e1e1e1;
+                text-decoration: none;
+                color: #666;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /*   ripple-out   */
+            .hvr-ripple-out {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+            }
+
+            .hvr-ripple-out:before {
+                content: "";
+                position: absolute;
+                border: #e1e1e1 solid 6px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+            }
+
+            .hvr-ripple-out:hover:before,
+            .hvr-ripple-out:focus:before,
+            .hvr-ripple-out:active:before {
+                -webkit-animation-name: hvr-ripple-out;
+                animation-name: hvr-ripple-out;
+            }
+
+            @keyframes hvr-ripple-out {
+                100% {
+                    top: -12px;
+                    right: -12px;
+                    bottom: -12px;
+                    left: -12px;
+                    opacity: 0;
+                }
+            }
+
+            /*   ripple-in   */
+            .hvr-ripple-in {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+            }
+
+            .hvr-ripple-in:before {
+                content: "";
+                position: absolute;
+                border: red solid 4px;
+                top: -12px;
+                right: -12px;
+                bottom: -12px;
+                left: -12px;
+                opacity: 0;
+                animation-duration: 1s;
+            }
+
+            .hvr-ripple-in:hover:before,
+            .hvr-ripple-in:focus:before,
+            .hvr-ripple-in:active:before {
+                animation: hvr-ripple-in 1s forwards;
+            }
+
+            @keyframes hvr-ripple-in {
+                100% {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+
+            /*   outline-out  */
+            .hvr-outline-out {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+            }
+
+            .hvr-outline-out:before {
+                content: "";
+                position: absolute;
+                border: #e1e1e1 solid 4px;
+                inset: 0;
+                transition-duration: 0.3s;
+                transition-property: top, right, bottom, left, opacity;
+                transition: all 0.3s;
+            }
+
+            .hvr-outline-out:hover:before,
+            .hvr-outline-out:focus:before,
+            .hvr-outline-out:active:before {
+                inset: -8px;
+            }
+
+            .hvr-outline-out.config:before {
+                content: "";
+                position: absolute;
+                border: #e1e1e1 solid 4px;
+                top: 8px;
+                right: 8px;
+                bottom: 8px;
+                left: 8px;
+                transition: all 0.3s;
+                opacity: 0;
+            }
+
+            .hvr-outline-out.config:hover:before {
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                border: red solid 4px;
+                opacity: 1;
+            }
+
+            /*   outline-in  */
+            .hvr-outline-in {
+                display: inline-block;
+                vertical-align: middle;
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+            }
+
+            .hvr-outline-in:before {
+                pointer-events: none;
+                content: "";
+                position: absolute;
+                border: #e1e1e1 solid 4px;
+                top: -16px;
+                right: -16px;
+                bottom: -16px;
+                left: -16px;
+                opacity: 0;
+                transition-duration: 0.3s;
+                transition-property: top, right, bottom, left;
+            }
+
+            .hvr-outline-in:hover:before,
+            .hvr-outline-in:focus:before,
+            .hvr-outline-in:active:before {
+                top: -8px;
+                right: -8px;
+                bottom: -8px;
+                left: -8px;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#" class="hvr-ripple-out">Ripple Out</a>
+
+        <a href="#" class="hvr-ripple-in">Ripple In</a>
+
+        <a href="#" class="hvr-outline-out">Outline Out</a>
+
+        <a href="#" class="hvr-outline-in">Outline In</a>
+
+        <a href="#" class="hvr-outline-out config">Outline Out</a>
+    </body>
+</html>

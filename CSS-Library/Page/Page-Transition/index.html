@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            body {
+                --color-text: #2e2e2e;
+                --color-text-frame: #fff;
+                --color-bg: #fff;
+                --color-link: #555;
+                --color-link-hover: #fff;
+                --color-intro-bg: #0e0e0e;
+                --color-intro-title: #fff;
+                --color-enter: #fff;
+                --color-content-title: #111;
+                --color-content-text: #868181;
+                --color-select: #111;
+                --color-select-item: #868181;
+                --color-select-item-hover: #000;
+                --color-select-current: #111;
+                --color-social: #555;
+                --color-social-hover: #000;
+                --color-reel-number: #111;
+                --color-menu-link: #101010;
+                --color-menu-link-hover: #000;
+                color: var(--color-text);
+                background-color: var(--color-bg);
+                font-family: Futura, futura-pt, sans-serif;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            main {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100%;
+                align-items: center;
+            }
+
+            .content,
+            .content__move {
+                width: 100%;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100%;
+                align-items: center;
+                grid-area: 1 / 1 / 2 / 2;
+                justify-self: center;
+                position: relative;
+            }
+
+            .content__move {
+                will-change: transform;
+                overflow: hidden;
+                background: var(--color-intro-bg);
+            }
+
+            .content__reverse {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                will-change: transform;
+            }
+
+            .content--grid {
+                padding: 3rem 3rem 2rem;
+                grid-template-columns: 50% 250px auto;
+                grid-column-gap: 1rem;
+                grid-template-rows: repeat(4, 25%);
+                grid-template-areas:
+                    "back ... ..."
+                    "title reel ..."
+                    "text reel ..."
+                    "social reel select";
+            }
+
+            .content--second {
+                background-color: #fff;
+            }
+
+            .content--first {
+                position: relative;
+                background-color: #2e2e2e;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="content content--grid content--second">
+                <h2 class="intro__title">Content 2</h2>
+            </div>
+            <div class="content content--grid content--first" style="transform: rotate3d(0, 0, 1, 35deg)">
+                <div
+                    class="content__move"
+                    style="
+                        width: calc(81.9152vw + 57.3576vh);
+                        height: calc(57.3576vw + 81.9152vh);
+                        transform: matrix(1, 0, 0, 1, 0, 0);
+                    "
+                >
+                    <div class="content__reverse" style="transform: matrix(0.81915, -0.57357, 0.57357, 0.81915, 0, 0)">
+                        <h2 class="intro__title">Content 1</h2>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

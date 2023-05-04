@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scroll {
+            margin: 0 auto;
+            width: 300px;
+            position: relative;
+            border: 1px solid gray;
+            overflow: hidden;
+            height: 300px;
+        }
+
+            .custom-scroll.display-scroll::after {
+                position: absolute;
+                content: '';
+                bottom: 5px;
+                left: 7px;
+                width: 100%;
+                background: #e9e9ea;
+                height: 3px;
+            }
+
+            .custom-scroll .custom-scroll-wrapper {
+                width: 100%;
+                height: 100%;
+                overflow-x: scroll;
+            }
+
+        .scroll-thumb {
+            z-index: 5;
+            cursor: pointer;
+            position: absolute;
+            width: 10px;
+            border-radius: 5px;
+            bottom: 5px;
+            left: 3px;
+            background: #000000;
+            height: 3px;
+            -webkit-transition: top .08s;
+            -moz-transition: top .08s;
+            -ms-transition: top .08s;
+            -o-transition: top .08s;
+            transition: top .08s;
+        }
+        .process-box {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-scroll">
+        <div class="custom-scroll-wrapper">
+            <div class="process-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt accusamus maxime voluptatem quasi. Recusandae optio nobis ratione iste consectetur consequatur cupiditate saepe laborum natus neque a provident eum explicabo delectus qui accusantium nostrum reiciendis soluta hic ut at sed laboriosam possimus repudiandae deserunt velit rerum. Aliquam ratione itaque corrupti aperiam quisquam unde aspernatur odio id repellendus corporis eaque expedita in ab minus possimus! Quo tempore consequatur repellat consectetur nemo molestiae perferendis ipsum esse nesciunt blanditiis nobis dicta? Laudantium quaerat inventore deleniti exercitationem explicabo quos pariatur sunt earum labore sed eius blanditiis architecto consequuntur ad consectetur unde sapiente nisi. Sunt eos.</p>
+            </div>
+        </div>
+    </div>
+    <div>Not special and not contained within scrolling</div>
+
+    <script type="text/javascript">
+        (function () {
+
+            var scrollContainer = document.querySelector('.custom-scroll'),
+                scrollContentWrapper = document.querySelector('.custom-scroll .custom-scroll-wrapper'),
+                scrollContent = document.querySelector('.custom-scroll .process-box'),
+                contentPosition = 0,
+                scrollerBeingDragged = false,
+                scroller,
+                topPosition,
+                scrollerWidth;
+
+            function calculateScrollerWidth() {
+                var visibleRatio = scrollContainer.offsetWidth / scrollContentWrapper.scrollWidth;
+                return visibleRatio * scrollContainer.offsetWidth;
+            }
+
+            function moveScroller(evt) {
+                console.log('moveScroller');
+                //console.log(evt);
+                console.log('evt.target.scrollLeft:' + evt.target.scrollLeft);
+                console.log('scrollContentWrapper.scrollWidth:' + scrollContentWrapper.scrollWidth);
+                var scrollPercentage = evt.target.scrollLeft / scrollContentWrapper.scrollWidth;
+
+                console.log('scrollPercentage:' + scrollPercentage);
+                topPosition = scrollPercentage * (scrollContainer.offsetWidth - 5);
+                scroller.style.left = topPosition + 'px';
+                console.log('scrollContainer.offsetWidth:' + scrollContainer.offsetWidth);
+                console.log('topPosition:' + topPosition);
+                console.log('--------------------');
+            }
+
+            function startDrag(evt) {
+                normalizedPosition = evt.pageX;
+                contentPosition = scrollContentWrapper.scrollLeft;
+                scrollerBeingDragged = true;
+            }
+
+            function stopDrag(evt) {
+              scrollerBeingDragged = false;
+            }
+
+            function scrollBarScroll(evt) {
+                if (scrollerBeingDragged === true) {
+                    var mouseDifferential = evt.pageX - normalizedPosition;
+                    var scrollEquivalent = mouseDifferential * (scrollContentWrapper.scrollWidth / scrollContainer.offsetWidth);
+                    scrollContentWrapper.scrollLeft = contentPosition + scrollEquivalent;
+                }
+            }
+
+            function createScroller() {
+                scroller = document.createElement("div");
+                scroller.className = 'scroll-thumb';
+
+                scrollerWidth = calculateScrollerWidth();
+               
+                if (scrollerWidth / scrollContainer.offsetWidth < 1) {
+                  
+                    scroller.style.width = scrollerWidth + 'px';
+                    scrollContainer.appendChild(scroller);
+                    scrollContainer.className += ' display-scroll';
+
+                    scroller.addEventListener('mousedown', startDrag);
+                    window.addEventListener('mouseup', stopDrag);
+                    window.addEventListener('mousemove', scrollBarScroll)
+                }
+
+            }
+
+            createScroller();
+
+            scrollContentWrapper.addEventListener('scroll', moveScroller);
+        }());
+
+
+    </script>
+</body>
+</html>

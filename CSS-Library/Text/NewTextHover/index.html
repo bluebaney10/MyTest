@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+     *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+       }
+
+       .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       h1{
+        font-size: 50px;
+        transform: translateY(115%);
+        transition: transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) 0s;
+       }
+
+       a.effect-1{
+        display: block;
+        overflow: hidden;
+       }
+
+       a.effect-1:hover > h1{
+        transition: transform 0.5s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.2s + 0.015s * var(0));
+        transform: translateY(0);
+       }
+
+       .hm-header__list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative;
+            pointer-events: auto;
+        }
+
+        .hm-header__list li:nth-of-type(1) {
+            font-size: 1.5rem;
+            padding-right: 36px;
+            -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+            transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+
+            -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 0.5s 0.04s;
+            transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 0.5s 0.04s;
+        }
+
+        .hm-header__list li:nth-of-type(1) a{
+            padding: 4px;
+            display: block;
+            color: #222;
+            position: relative;
+            z-index: 1;
+        }
+
+        .t__pare {
+            position: relative;
+            overflow: hidden;
+        }
+
+       .t.words:nth-of-type(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+       }
+
+        .t.words .char {
+            -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.02s * var(--char-index));
+            transition: -webkit-transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.02s * var(--char-index));
+            transition: transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.02s * var(--char-index));
+            transition: transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.02s * var(--char-index)), -webkit-transform 0.7s cubic-bezier(0.7, 0.2, 0.1, 1) calc(0.02s * var(--char-index));
+            display: inline-block;
+       }
+    </style>
+</head>
+<body>
+    <a class="effect-1">
+        <h1>
+            A and B
+         </h1>
+           
+    </a>
+    
+    ul.hm-header__list
+    <ul class="hm-header__list">
+        <li class="hm-header__list__item is-pc" data-hover="" cursor-class="mini">
+            <a href="javascript:void(0)">
+                <div class="t__pare">
+                <div class="t words chars splitting" data-splitting="" style="--word-total:1; --char-total:5;">
+                    <span class="word" data-word="Items" style="--word-index:0;">
+                        <span class="char" data-char="I" style="--char-index:0;">I<!----></span>
+                        <span class="char" data-char="t" style="--char-index:1;">t<!----></span>
+                        <span class="char" data-char="e" style="--char-index:2;">e<!----></span>
+                        <span class="char" data-char="m" style="--char-index:3;">m<!----></span>
+                        <span class="char" data-char="s" style="--char-index:4;">s<!----></span>
+                    </span>
+                </div>
+
+                <div class="t words chars splitting" data-splitting="" style="--word-total:1; --char-total:5;">
+                    <span class="word" data-word="Items" style="--word-index:0;">
+                        <span class="char" data-char="I" style="--char-index:0;">I<!----></span>
+                        <span class="char" data-char="t" style="--char-index:1;">t<!----></span>
+                        <span class="char" data-char="e" style="--char-index:2;">e<!----></span>
+                        <span class="char" data-char="m" style="--char-index:3;">m<!----></span>
+                        <span class="char" data-char="s" style="--char-index:4;">s<!----></span>
+                    </span>
+                </div>
+                </div>
+                </a>
+         </li>
+    </ul>
+
+
+</body>
+</html>

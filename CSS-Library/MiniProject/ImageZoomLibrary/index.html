@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="vanilla-zoom/vanilla-zoom.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="vanilla-zoom" id="my-gallery">
+            <div class="sidebar">
+                <img src="img1.jpg" alt="" class="small-preview">
+                <img src="img2.jpg" alt="" class="small-preview">
+                <img src="img3.jpg" alt="" class="small-preview">
+            </div>
+            <div class="zoomed-image">
+                <!-- <img src="img1.jpg" alt="" class="small-preview"> -->
+            </div>
+       </div>
+    </div>
+   
+    <script src="main.js"></script>
+    <script src="vanilla-zoom/vanilla-zoom.js"></script>
+    <script>
+        vanillaZoom.init("#my-gallery")
+    </script>
+</body>
+</html>

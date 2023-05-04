@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            body {
+                background-color: #544b45;
+            }
+
+            button {
+                all: unset;
+            }
+
+            .bt {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .ico-arrow-left,
+            .ico-arrow-side {
+                width: 5px;
+                height: 8px;
+                color: #ffffff;
+            }
+
+            .ico-arrow-left svg,
+            .ico-arrow-left img,
+            .ico-arrow-side svg {
+                position: absolute;
+                width: 5px;
+                height: 8px;
+            }
+
+            .bt-back {
+                position: relative;
+                padding: 0px 14px;
+                height: 14px;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            .bt-back .ico-arrow-left {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .bt-back span,
+            .bt-back .txt {
+                font-size: 12px;
+                line-height: 14px;
+                color: #ffffff;
+            }
+
+            .bt-back:hover .txt {
+                animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+            }
+
+            @keyframes MoveUpInitial {
+                to {
+                    transform: translate3d(0, -105%, 0);
+                }
+            }
+
+            @keyframes MoveUpEnd {
+                from {
+                    transform: translate3d(0, 100%, 0);
+                }
+                to {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            .bt-route {
+                height: 40px;
+                border: 1px solid #fff;
+                max-width: 240px;
+            }
+
+            .bt-route .txt {
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .ico-arrow-light-right {
+                width: 8px;
+                height: 14px;
+                color: #ffffff;
+            }
+
+            .bt-route .ico-arrow-light-right {
+                margin-left: 12px;
+            }
+
+            .ico-arrow-light-right svg,
+            .ico-arrow-light-right img {
+                width: 8px;
+                height: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <br /><br />
+        <div class="bt bt-back">
+            <span class="txt">Go Back</span>
+            <div class="ico-arrow-left">
+                <!--  <svg>
+                    <use xlink:href="svgs/arrow-left.svg#arrow-left"></use>
+                </svg> -->
+                <img src="svgs/arrow-left.svg" />
+            </div>
+        </div>
+        <br /><br />
+        <a class="bt bt-route">
+            <span class="txt">Route</span>
+            <div class="ico-arrow-light-right">
+                <!--   <svg>
+                    <use xlink:href="/assetfiles/img/vanbesouw/svgs/arrow-light.svg#arrow-light"></use>
+                </svg> -->
+
+                <img src="svgs/arrow-light.svg" />
+            </div>
+        </a>
+    </body>
+</html>

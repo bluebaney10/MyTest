@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": false,
+    //"exactOptionalPropertyTypes": false,
+    "noImplicitAny": false,
+    "noImplicitOverride": false,
+    "noImplicitReturns": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+
+    "target": "es5",     
+    "outDir": "./dist",
+    "rootDir": "./script",                          
+    "module": "commonjs",                          
+    "strict": true,                                 
+    "esModuleInterop": true,                        
+    "skipLibCheck": true,                         
+    "forceConsistentCasingInFileNames": true,
+   // "sourceMap": true,        
+  }
+}

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    /* *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+       }*/
+
+       .box1{
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        background-color: red;
+       }
+
+       .box2{
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        background-color: blue;
+        box-sizing: border-box;
+       }
+
+       .box3 > p{
+        color: red;
+       } 
+
+       .box4 + p{
+        color: red;
+       } 
+
+       .box5 ~ p{
+        color: red;
+       } 
+    </style>
+</head>
+<body>
+    <h1>Test box-sizing: border-box </h1>
+    <div class="box1">Box without box-sizing</div>
+    <div class="box2">Box with box-sizing</div>
+    
+    <br><br>
+    <h1>1.Child Selector (>)</h1>
+    <p>
+        .box3 > p{
+            color: red;
+        } 
+    </p>
+    <div class="box3">
+        <p>content 1</p>
+        <p>content 2</p>
+        <p>content 3</p>
+        <div>
+            content 4
+            <span>content 5</span>
+            <p>content 6</p>
+       </div>
+    </div>
+    <p>content 7</p>
+
+
+    <br><br>
+    <h1>2.Adjacent sibling Selector (+)</h1>
+    <p>
+        .box4 + p{
+            color: red;
+           } 
+   </p>
+    <div class="box4">
+        <p>content 1</p>
+        <p>content 2</p>
+        <p>content 3</p>
+        <div>
+            content 4
+            <span>content 5</span>
+            <p>content 6</p>
+       </div>
+    </div>
+    <p>content 7</p>
+    <p>content 8</p>
+
+
+    <br><br>
+    <h1>3.General sibling Selector (~)</h1>
+    <p>
+        .box5 ~ p{
+            color: red;
+           } 
+   </p>
+    <div class="box5">
+        <p>content 1</p>
+        <p>content 2</p>
+        <p>content 3</p>
+        <div>
+            content 4
+            <span>content 5</span>
+            <p>content 6</p>
+       </div>
+    </div>
+    <p>content 7</p>
+    <p>content 8</p>
+
+</body>
+</html>
