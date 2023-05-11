@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #111111;
+            }
+            .scan {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .scan .hand {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background: url(hand_02.png);
+                background-repeat: no;
+                background-size: 500px;
+            }
+
+            .scan .hand::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(hand_01.png);
+                background-size: 500px;
+                animation: animate 4s ease-in-out infinite;
+            }
+
+            .scan .hand::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 8px;
+                background-color: #3fefef;
+                border-radius: 8px;
+                filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+                animation: animateLine 4s ease-in-out infinite;
+            }
+
+            .scan h3 {
+                text-transform: uppercase;
+                font-size: 2em;
+                letter-spacing: 2px;
+                margin-top: 20px;
+                color: #3fefef;
+                filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
+                animation: animateText 0.5s steps(1) infinite;
+            }
+
+            .scan .hand .lines {
+                position: absolute;
+                inset: 0;
+            }
+
+            .scan .hand .lines::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(lines.png);
+                background-size: 500px;
+                animation: handLines 4s ease-in-out infinite;
+            }
+
+            .scan .hand .lines::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(points.png);
+                background-size: 500px;
+                animation: handPoints 4s ease-in-out infinite;
+            }
+
+            @keyframes animate {
+                0%,
+                100% {
+                    height: 0;
+                }
+                50% {
+                    height: 100%;
+                }
+            }
+
+            @keyframes animateLine {
+                0%,
+                100% {
+                    top: 0;
+                }
+                50% {
+                    top: 100%;
+                }
+            }
+
+            @keyframes animateText {
+                0%,
+                100% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes handLines {
+                0%,
+                25%,
+                100% {
+                    height: 0;
+                }
+                50% {
+                    height: 100%;
+                }
+            }
+
+            @keyframes handPoints {
+                0%,
+                100% {
+                    height: 0;
+                }
+                50% {
+                    height: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="scan">
+            <div class="hand">
+                <div class="lines"></div>
+            </div>
+            <h3>Hand Print Scanning</h3>
+        </div>
+    </body>
+</html>
